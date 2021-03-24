@@ -1,0 +1,21 @@
+
+.section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.game-title {
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.lower-center-area{
+    margin: 200px;
+    text-align: center;
+}

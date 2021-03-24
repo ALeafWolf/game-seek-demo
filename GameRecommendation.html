@@ -1,39 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Game Seek - Game Recommendation</title>
-    <link href="./bootstrap.min.css" rel="stylesheet">
+  <title>Game Seek - Game Recommendation</title>
+  <link href="./bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Game Seek</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="./Index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./SearchGame.html">Search Game</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="./GameRecommendation.html">Game Recommendation</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./Login.html">Login</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    <div class="container">
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph.</p>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Game Seek</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./Index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./SearchGame.html">Search Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./GameRecommendation.html">Game Recommendation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Login.html">Login</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+  <div class="container">
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+    <div class="section-container">
+      <div>
+        <img src="./assets/imgs/sd-gundam-g-gen.jpg" class="img-thumbnail" alt="SD Gundam" width="300" height="300">
+        <div class="game-title">SD Gundam G Generations Cross Ray</div>
+        <div class="center">
+          <button type="button" class="btn btn-primary">Check Details</button>
+        </div>
+      </div>
+      <div>
+        <img src="./assets/imgs/Scarlet-Nexus.jpg" class="img-thumbnail" alt="Scarlet Nexus" width="300" height="300">
+        <div class="game-title">Scarlet Nexus</div>
+        <div class="center">
+          <button type="button" class="btn btn-primary">Check Details</button>
+        </div>
+      </div>
+      <div>
+        <img src="./assets/imgs/mh-stories-2.jpg" class="img-thumbnail" alt="MH Stories 2" width="300" height="300">
+        <div class="game-title">Monster Hunter Stories 2</div>
+        <div class="center">
+          <button type="button" class="btn btn-primary">Check Details</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-container">
+      <div class="lower-center-area">
+        <button type="button" class="btn btn-primary">Set Filters</button>
+      </div>
+      <div class="lower-center-area">
+        <button type="button" class="btn btn-primary btn-lg">Regenerate</button>
+      </div>
+      <div class="lower-center-area">
+        <button type="button" class="btn btn-primary">Settings</button>
+      </div>
+    </div>
+
+  </div>
+
+
 </body>
 
 </html>
