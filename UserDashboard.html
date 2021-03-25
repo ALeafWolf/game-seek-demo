@@ -4,7 +4,6 @@
 <head>
     <title>Game Seek</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -38,22 +37,16 @@
     </nav>
     <div class="container">
         <div class="container-fluid">
-            <h1>Login</h1>
+            <h1>Account Dashboard</h1>
         </div>
-
-        <form>
-            <div class="mb-3">
-                <label for="inputDeveloper" class="form-label">Email: </label>
-                <input type="text" class="form-control" id="inputDeveloper">
+        <div>
+            <img src="./assets/imgs/user.svg" class="img-thumbnail" alt="SD Gundam" width="150" height="150">
+            <div class="game-title">Welcome, User</div>
+            <div class="center">
+              <a href="./UserAccountPage.html" class="btn btn-primary">Edit Account</a>
+              <button type="button" class="btn btn-primary">Request Unban</button>
             </div>
-            <div class="mb-3">
-                <label for="inputPublisher" class="form-label">Password: </label>
-                <input type="text" class="form-control" id="inputPublisher">
-            </div>
-
-            <a class="btn btn-primary" href="./GameDetail.html">Login</a>
-            <a class="btn btn-danger" href="./GameDetail.html">Register</a>
-        </form>
+          </div>
     </div>
 </body>
 
