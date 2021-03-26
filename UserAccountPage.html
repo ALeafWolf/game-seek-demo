@@ -4,7 +4,6 @@
 <head>
     <title>Game Seek</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -38,21 +37,33 @@
     </nav>
     <div class="container">
         <div class="container-fluid">
-            <h1>Login</h1>
+            <h1>Account Details</h1>
         </div>
 
         <form>
             <div class="mb-3">
-                <label for="inputDeveloper" class="form-label">Email: </label>
+                <label for="inputDeveloper" class="form-label">Username: </label>
                 <input type="text" class="form-control" id="inputDeveloper">
             </div>
             <div class="mb-3">
-                <label for="inputPublisher" class="form-label">Password: </label>
+                <label for="inputPublisher" class="form-label">Email: </label>
                 <input type="text" class="form-control" id="inputPublisher">
             </div>
-            <a class="btn btn-primary" href="./UserDashboard.html">Login</a>
-            <a class="btn btn-danger" href="./Register.html">Register</a>
-            <a class="btn btn-secondary" href="./AdminDashboard.html">Login as Admin</a>
+            <div class="mb-3">
+                <label for="inputPublisher" class="form-label">New password: </label>
+                <input type="text" class="form-control" id="inputPublisher">
+            </div>
+            <div class="mb-3">
+                <label for="inputPublisher" class="form-label">Confirm password: </label>
+                <input type="text" class="form-control" id="inputPublisher">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Update profile image: </label><br>
+                <img src="./assets/imgs/user.svg" class="img-thumbnail" alt="Avatar" width="150" height="150"><br><BR>
+                <input type="file" id="myFile" name="filename"><br><br>
+            </div>
+            <a class="btn btn-primary" href="./GameDetail.html">Submit</a>
+            <a class="btn btn-danger" href="./GameDetail.html">Cancel</a>
         </form>
     </div>
 </body>
