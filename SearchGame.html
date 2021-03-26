@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Game Seek - Search Game</title>
-    <link href="./bootstrap.min.css" rel="stylesheet">
+  <title>Game Seek - Search Game</title>
+  <link href="./bootstrap.min.css" rel="stylesheet">
+  <link href="./css/fontawesome.all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Game Seek</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="./Index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./SearchGame.html">Search Game</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./GameRecommendation.html">Game Recommendation</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./Login.html">Login</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    <div class="container">
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph.</p>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Game Seek</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./Index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./SearchGame.html">Search Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./GameRecommendation.html">Game Recommendation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Login.html">Login</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+  <div class="container">
+    <form>
+      <h1>Search Game</h1>
+      <div class="row">
+        <div class="col">
+          <label for="searchBar">Keywords</label>
+          <input name="searchBar" type="text" class="form-control">
+        </div>
+        <div class="col-2">
+          <label for="option">Searched by</label>
+          <select name="option form-select">
+            <option>Title</option>
+            <option>Publisher</option>
+            <option>Developer</option>
+            <option>Platform</option>
+          </select>
+        </div>
+        <a class="btn btn-primary col-2" href="./GameRecommendation.html">Search</a>
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>
