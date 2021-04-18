@@ -1,5 +1,5 @@
 const getGame = (title) => {
-    let url = `http://localhost:8080/api/games/${title}`; 
+    let url = `https://prog30025-game-seek-api.herokuapp.com/api/games/${title}`; 
     fetch(url)
         .then(response => response.json())
         .then(data => displayGame(data[0]))
@@ -21,6 +21,11 @@ const displayGame = (game) => {
         tr.append(td)
         tbody.append(tr)
     }
+}
+
+const toEditPage = function(){
+    localStorage.setItem("title", this.id)
+    location.href='./GameDetail.html'
 }
 
 document.body.onload = getGame(localStorage.getItem('title'))

@@ -1,5 +1,5 @@
 const getGames = () => {
-    let url = `http://localhost:8080/api/games/`
+    let url = `https://prog30025-game-seek-api.herokuapp.com/api/games`
     fetch(url)
         .then(response => response.json())
         .then(data => listGames(data))
