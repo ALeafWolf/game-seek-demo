@@ -10,13 +10,12 @@ async function addNewGame(e) {
 
     try {
         const formData = new FormData(form);
-        // const plainFormData = Object.fromEntries(formData.entries());
-        // const formDataJsonString = JSON.stringify(plainFormData);
         const responseData = await postFormDataAsJson({ url, formData });
         console.log({ responseData })
     } catch (error) {
         console.error(error);
     }
+    window.location.replace("./GameList.html")
 }
 
 async function postFormDataAsJson({ url, formData }) {
@@ -43,33 +42,3 @@ async function postFormDataAsJson({ url, formData }) {
     return response.json();
 }
 
-
-const test = () => {
-    const request = new Request(
-        'http://localhost:8080/api/games',
-        {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            mode: 'no-cors',
-            body: '{"title": "Tears of Themis"}'
-        }
-    )
-    fetch(request).then(response => {
-        if (response.status === 200) {
-            return response.json();
-        } else {
-            throw new Error('Something went wrong on api server!');
-        }
-    })
-        .then(response => {
-            console.debug(response);
-            // ...
-        }).catch(error => {
-            console.error(error);
-        });
-}
-
-document.getElementById("cancelBtn").onclick = test

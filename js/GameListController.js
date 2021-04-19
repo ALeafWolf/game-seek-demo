@@ -67,22 +67,17 @@ const deleteGame = function () {
     let u = url + this.id
     console.log(u)
 
-    const request = new Request(
-        u,
-        {
-            method: 'DELETE'
-        }
-    )
+    const request = new Request(u, {method: 'DELETE'})
     fetch(request).then(response => {
         if (response.status === 200) {
-            console.log(response);
+            console.log(`Game ${this.id} is successfully deleted`);
         } else {
             throw new Error('Something went wrong on api server!');
         }
+        location.reload()
     }).catch(error => {
         console.error(error);
     });
-    location.reload()
 }
 
 document.body.onload = getGames()
