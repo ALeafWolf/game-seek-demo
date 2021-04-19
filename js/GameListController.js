@@ -1,5 +1,6 @@
+const url = `https://prog30025-game-seek-api.herokuapp.com/api/games/`
+
 const getGames = () => {
-    let url = `https://prog30025-game-seek-api.herokuapp.com/api/games`
     fetch(url)
         .then(response => response.json())
         .then(data => listGames(data))
@@ -52,18 +53,36 @@ const listGames = (data) => {
     });
 }
 
-const toDetailPage = function(){
+const toDetailPage = function () {
     localStorage.setItem("title", this.id)
-    location.href='./GameDetail.html'
+    location.href = './GameDetail.html'
 }
 
-const toEditPage = function(){
+const toEditPage = function () {
     localStorage.setItem("title", this.id)
-    location.href='./EditGame.html'
+    location.href = './EditGame.html'
 }
 
-const deleteGame = function(){
+const deleteGame = function () {
+    let u = url + this.id
+    console.log(u)
 
+    const request = new Request(
+        u,
+        {
+            method: 'DELETE'
+        }
+    )
+    fetch(request).then(response => {
+        if (response.status === 200) {
+            console.log(response);
+        } else {
+            throw new Error('Something went wrong on api server!');
+        }
+    }).catch(error => {
+        console.error(error);
+    });
+    location.reload()
 }
 
 document.body.onload = getGames()
