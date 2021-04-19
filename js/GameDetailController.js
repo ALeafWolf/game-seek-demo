@@ -7,10 +7,13 @@ const getGame = (title) => {
 }
 
 const displayGame = (game) => {
-    console.log(game)
+    let editBtn = document.getElementsByClassName('btnEdit')[0];
+    document.getElementById('pageTitle').textContent = game.title
+    editBtn.id = game.title
+    console.log(editBtn)
     let tbody = document.getElementById('gameInfo')
     let ths = ["Developer", "Publisher", "Platform", "Releasey", "Gerne", "Description"]
-    let tds = [game.developer, game.publisher, game.platform, game.releasy, game.genre, game.description]
+    let tds = [game.developer, game.publisher, game.platform, game.release, game.genre, game.description]
     for(let i = 0; i < 6; i++){
         let tr = document.createElement('tr');
         let th = document.createElement('th')
@@ -25,7 +28,6 @@ const displayGame = (game) => {
 
 const toEditPage = function(){
     localStorage.setItem("title", this.id)
-    location.href='./GameDetail.html'
 }
 
 document.body.onload = getGame(localStorage.getItem('title'))
