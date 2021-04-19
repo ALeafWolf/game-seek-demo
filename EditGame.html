@@ -37,84 +37,34 @@
             <h1 id="pageTitle"></h1>
         </div>
 
-        <form>
+        <form id="gameForm">
             <div class="mb-3">
-                <label for="inputDeveloper" class="form-label">Developer</label>
-                <input type="text" class="form-control" id="inputDeveloper" value="Square Enix Business Division 1">
+                <label for="developer" class="form-label">Developer</label>
+                <input type="text" class="form-control" name="developer" id="inputDeveloper">
             </div>
             <div class="mb-3">
-                <label for="inputPublisher" class="form-label">Publisher</label>
-                <input type="text" class="form-control" id="inputPublisher" value="Square Enix">
+                <label for="publisher" class="form-label">Publisher</label>
+                <input type="text" class="form-control" name="publisher" id="inputPublisher">
             </div>
             <div class="mb-3">
-                <label for="inputPlatform" class="form-label">Platform</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="PC">
-                    <label class="form-check-label" for="PC">
-                        PC
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="PS4" checked>
-                    <label class="form-check-label" for="PC">
-                        Play Station 4
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="PS5" checked>
-                    <label class="form-check-label" for="PC">
-                        Play Station 5
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="Xbox">
-                    <label class="form-check-label" for="Xbox">
-                        Xbox
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="NS">
-                    <label class="form-check-label" for="NS">
-                        Nitando Switch
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="Other">
-                    <label class="form-check-label" for="Other">
-                        Other
-                    </label>
-                </div>
+                <label for="platform" class="form-label">Platform</label>
+                <input type="text" class="form-control" name="platform" id="inputPlatform">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Release</label>
-                <textarea class="form-control" aria-label="With textarea" style="height: fit-content;">
-                    PlayStation 4
-                    April 10, 2020
-                    PlayStation 5
-                    June 10, 2021
+                <label for="release" class="form-label">Releasy</label>
+                <input type="text" class="form-control" name="release" id="inputRelease">
+            </div>
+            <div class="mb-3">
+                <label for="gerne" class="form-label">Genre</label>
+                <input type="text" class="form-control" name="genre" id="inputGenre">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" aria-label="With textarea" name="description" id="inputDescription"> 
                 </textarea>
             </div>
-            <div class="mb-3">
-                <label for="inputGerne" class="form-label">Gerne</label>
-                <input type="text" class="form-control" id="inputGerne" value="Action role-playing">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Description</label>
-                <textarea class="form-control" aria-label="With textarea">
-                    Final Fantasy VII Remake[a] is a 2020 action role-playing game developed and published by Square
-                        Enix. It is the first in a planned series of games remaking the 1997 PlayStation game Final
-                        Fantasy VII. Set in the dystopian cyberpunk metropolis of Midgar, players control mercenary
-                        Cloud Strife. He joins AVALANCHE, an eco-terrorist group trying to stop the powerful
-                        megacorporation Shinra from using the planet's life essence as an energy source. The gameplay
-                        combines real-time action with strategic and role-playing elements.
-                </textarea>
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Image</label>
-                <input type="file" id="myFile" name="filename">
-            </div>
-            <a class="btn btn-primary" href="./GameDetail.html">Submit</a>
-            <a class="btn btn-danger" href="./GameDetail.html">Cancel</a>
+            <input class="btn btn-primary" type="submit">
+            <a class="btn btn-danger" id="cancelBtn">Cancel</a>
         </form>
     </div>
     <script src="js/EditGameController.js"></script>
