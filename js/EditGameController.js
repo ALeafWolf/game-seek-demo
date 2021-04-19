@@ -28,17 +28,18 @@ async function updateGame(e) {
     e.preventDefault();
     const form = e.currentTarget
     let t = localStorage.getItem('title');
-    // const url = `https://prog30025-game-seek-api.herokuapp.com/api/games/${t}`;
-    const url = `http://localhost:8080/api/games/${t}`
+    const url = `https://prog30025-game-seek-api.herokuapp.com/api/games/${t}`;
+    // const url = `http://localhost:8080/api/games/${t}`
     console.log(url)
     try {
         const formData = new FormData(form);
         const responseData = await postFormDataAsJson({ url, formData });
         console.log({ responseData })
+        window.location.replace("./GameList.html")
+
     } catch (error) {
         console.error(error);
     }
-    window.location.replace("./GameList.html")
 }
 
 async function postFormDataAsJson({ url, formData }) {
