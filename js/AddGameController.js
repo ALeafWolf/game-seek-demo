@@ -12,10 +12,11 @@ async function addNewGame(e) {
         const formData = new FormData(form);
         const responseData = await postFormDataAsJson({ url, formData });
         console.log({ responseData })
+        window.location.replace("./GameList.html")
+
     } catch (error) {
         console.error(error);
     }
-    window.location.replace("./GameList.html")
 }
 
 async function postFormDataAsJson({ url, formData }) {
